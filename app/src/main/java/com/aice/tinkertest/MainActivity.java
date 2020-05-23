@@ -7,6 +7,7 @@ import androidx.databinding.DataBindingUtil;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         activityMainBinding = DataBindingUtil.setContentView(this,R.layout.activity_main_tinker);
-        activityMainBinding.nameTv.setText("修复前");
+        activityMainBinding.nameTv.setText("修复后");
+        activityMainBinding.nameTv.setTextColor(Color.RED);
         activityMainBinding.toastBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

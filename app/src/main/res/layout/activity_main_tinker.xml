@@ -25,6 +25,10 @@
             android:text="弹出Toast"
             android:id="@+id/toastBtn"
             />
-
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/test"
+            android:id="@+id/testIv"></ImageView>
     </LinearLayout>
 </layout>
