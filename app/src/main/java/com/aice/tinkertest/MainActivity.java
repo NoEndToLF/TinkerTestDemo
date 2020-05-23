@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.aice.tinkertest.addclass.ToastUtils;
 import com.aice.tinkertest.databinding.ActivityMainTinkerBinding;
 import com.aice.tinkertest.tinker.util.Utils;
 import com.tencent.tinker.lib.tinker.TinkerInstaller;
@@ -26,12 +27,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         activityMainBinding = DataBindingUtil.setContentView(this,R.layout.activity_main_tinker);
-        activityMainBinding.nameTv.setText("修复后");
-        activityMainBinding.nameTv.setTextColor(Color.RED);
+        activityMainBinding.nameTv.setText("第二次修复后");
+        activityMainBinding.nameTv.setTextColor(Color.BLUE);
         activityMainBinding.toastBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "修复前", Toast.LENGTH_SHORT).show();
+                ToastUtils.showToast(MainActivity.this);
             }
         });
     }

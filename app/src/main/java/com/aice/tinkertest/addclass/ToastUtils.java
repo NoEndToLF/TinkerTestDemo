@@ -5,6 +5,6 @@ import android.widget.Toast;
 
 public class ToastUtils {
     public static void showToast(Context context){
-        Toast.makeText(context, "修复后", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "第二次修复后", Toast.LENGTH_SHORT).show();
     }
 }
